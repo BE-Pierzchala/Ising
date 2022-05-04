@@ -7,15 +7,17 @@ from scipy import optimize
 import time
 from scipy import special
 
-#n = 50
 m = 50
+# number of timesteps
 t = 400
+# Set magnetic field to 0
 H = 0
+
+# Create temperature array with different spacings in different regions
 T = np.arange(0.1,2,0.2)
 T = np.concatenate((T, np.arange(2,2.8,0.02)))
 T = np.concatenate((T,np.arange(2.8,3.6,0.2)))
 
-#T = np.linspace(2.1,2.5,48)
 N = [100,150,200]
 tc = []
 tce = []
